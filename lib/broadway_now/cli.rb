@@ -36,7 +36,8 @@ class BroadwayNow::CLI
         puts "Show: #{show.name}"
         puts "Theater: #{show.theater}"
         puts "Running Time: #{show.running_time}"
-        puts "Price: #{show.price}"
+        puts "---------------"
+        #puts "Price: #{show.price}"
         
       elsif input == "all" 
         list_shows

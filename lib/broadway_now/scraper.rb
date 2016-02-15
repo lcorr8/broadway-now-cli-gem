@@ -17,6 +17,7 @@
 #page 1: first 20 shows
 # url:   "http://www.broadway.com/shows/tickets/"
 #you'll have to iterate through these and get this info:
+#doc.css("div.grid-container .row-wrapper").first.text.strip
 # show title:       doc.css(".h4.show-title a").text
 # show theater:     doc.css(".show-info li[2]").text
 # show duration/intermission:      doc.css(".show-info li[3] span").text

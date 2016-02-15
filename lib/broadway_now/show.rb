@@ -1,5 +1,5 @@
 class BroadwayNow::Show
-  attr_accessor :name, :theater, :running_time, :price, :url #:story, :cast
+  attr_accessor :name, :theater, :running_time  #, :price, :url, :story, :cast
 
   def self.today
     #should return a list of all shows currently running.
@@ -31,7 +31,7 @@ class BroadwayNow::Show
   def self.scrape_shows
     shows = []
 
-    shows << self.scrape_first
+    (shows << self.scrape_first).flatten!
     #shows << self.scrape_second
     #shows << self.scrape_third
     #shows << self.scrape_fourth
@@ -41,8 +41,37 @@ class BroadwayNow::Show
 
   def self.scrape_first
     doc = Nokogiri::HTML(open("http://www.broadway.com/shows/tickets/?page=1"))
-    binding.pry
+    #binding.pry
+    top_20_shows = []
+    # all shows to iterate through : 
+    doc.css("div.grid-container .row-wrapper .grid-poster-unit").each do |show|
+      #obtain info from each show:
+      show_obj = self.new
+      show_obj.name = show.css(".h4.show-title a").text
+      show_obj.theater = show.css(".show-info li[2]").text
+      show_obj.running_time = show.css(".show-info li[3] span").text
+      top_20_shows << show_obj
+    end
+    top_20_shows 
   end
 
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
