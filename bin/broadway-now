@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+
+require "bundler/setup"
+require "broadway_now"
+#imagine having a CLI class that can be instantiated and called upon.
+#should be all you need to start your program
+BroadwayNow::CLI.new.call 
