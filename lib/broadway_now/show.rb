@@ -1,5 +1,5 @@
 class BroadwayNow::Show
-  attr_accessor :name, :theater, :running_time, :url, :story #, :price,   :cast
+  attr_accessor :name, :theater, :running_time, :url, :story, :price#, :cast
 
   def self.today
     #should return a list of all shows currently running.
@@ -55,6 +55,7 @@ class BroadwayNow::Show
       #scrape_more(url) #return show_obj.story and potentially price.
       more = Nokogiri::HTML(open(url))
       show_obj.story = more.css(".gray-dk.inner-content-bold p").first.text
+      show_obj.price = more.css(".man.blue-link-lt").text
       top_20_shows << show_obj
     end
     top_20_shows 

@@ -36,6 +36,7 @@ class BroadwayNow::CLI
         puts "--------------------Details--------------------"
         puts "     Show:             #{show.name}"
         puts "     Theater:         #{show.theater}"
+        puts "     Price:            #{show.price}"
         puts "     Website:          #{show.url}"
         puts "     Running Time:     #{show.running_time}"
         puts "\nStory: \n"
