@@ -1,12 +1,34 @@
 class BroadwayNow::Show
   attr_accessor :name, :theater, :running_time, :url, :story, :price#, :cast
 
-  def self.today
+  @@all = []
+
+  def initialize(hash_attributes)
+    hash_attributes.each {|key,value| self.send(("#{key}="), value)} #review mass assignment again! 
+  end
+
+  def create_shows(shows_array)
+    shows_array.each do |hash_attributes|
+      show = Show.new(hash_attributes)
+      @@all << show
+  end
+
+  def add_info(extra_info_hash)
+
+  end
+
+  def all
+    @@all
+  end
+
+def self.today
     #should return an array of all shows currently running.
     # technically a bunch of instances of Show.
     self.scrape_shows
   end
 
+
+########### move to scrape class.#######
   def self.scrape_shows
     shows = []
 

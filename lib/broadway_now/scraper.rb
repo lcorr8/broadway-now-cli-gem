@@ -1,3 +1,7 @@
+class BroadwayNow::Scraper
+  
+
+end
 #require 'nokogiri'
 #require 'open-uri'
 #require 'pry'
