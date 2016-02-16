@@ -25,6 +25,6 @@
 
 #parse extra info from show page
 #url: http://www.broadway.com/shows/the-lion-king/
-#no iteration, just pull info, but receive the show name with dashes for spaces
+#no iteration, just pull info, use show_obj.url info
 # show story: doc.css(".gray-dk.inner-content-bold p")
 #

@@ -22,21 +22,25 @@ class BroadwayNow::CLI
     @shows.each.with_index(1) do |show,i|
       puts "#{i}. #{show.name}"
     end
+    puts "---------------"
   end
 
   def menu
     input = nil
     while input != "exit"
-      puts "Enter the number of the show you would like more info on, or type 'all' to see all shows, or 'exit' to exit the program:"
+      puts "Enter show number for more info, 'all' to see all shows, or 'exit' :"
       input = gets.strip.downcase
 
       if input.to_i > 0
         show = @shows[input.to_i-1] 
-        puts "-----Details-----"
-        puts "Show: #{show.name}"
-        puts "Theater: #{show.theater}"
-        puts "Running Time: #{show.running_time}"
-        puts "---------------"
+        puts "--------------------Details--------------------"
+        puts "     Show:             #{show.name}"
+        puts "     Theater:         #{show.theater}"
+        puts "     Website:          #{show.url}"
+        puts "     Running Time:     #{show.running_time}"
+        puts "\nStory: \n"
+        puts "#{show.story}"
+        puts "---------------------------------------------"
         #puts "Price: #{show.price}"
         
       elsif input == "all" 
