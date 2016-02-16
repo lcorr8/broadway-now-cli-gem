@@ -3,26 +3,19 @@
 #welcomes user, and deals with input.
 class BroadwayNow::CLI
 
-  #def initialize
-  #end 
-
   def call
-    
     list_shows
     menu
     goodbye
   end 
 
   def list_shows
-    #it will eventually get actual shows
-    #for now we continue with a stub
     puts "-----Shows currently running:-----"
-    
     @shows = BroadwayNow::Show.today
     @shows.each.with_index(1) do |show,i|
       puts "#{i}. #{show.name}"
     end
-    puts "---------------"
+    puts "----------------------------------"
   end
 
   def menu
@@ -42,14 +35,13 @@ class BroadwayNow::CLI
         puts "\nStory: \n"
         puts "#{show.story}"
         puts "---------------------------------------------"
-        #puts "Price: #{show.price}"
-        
+
       elsif input == "all" 
         list_shows
       elsif input == "exit"
         goodbye
       else
-        puts "Oops! incorrect input! Enter the number of a show for more info, 'all' for a list of all shows currently running, or 'exit' to leave Broadway Now."  
+        puts "Oops! incorrect input! Enter show number for more info, 'all' to see all shows, or 'exit' :"  
       end 
     end   
   end

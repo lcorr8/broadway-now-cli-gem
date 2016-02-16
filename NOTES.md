@@ -5,9 +5,9 @@
  x 3. start with entry point - the file run.
  x 4. force that to build the CLI interface.
  x 5. stub out the interface.
-  6. start making things real.
-  7. discover objects
-  8. program
+ x 6. start making things real.
+ x 7. discover objects
+ x 8. program
 
 
 - a command line inteface for broadway shows, starting with broadway.com
