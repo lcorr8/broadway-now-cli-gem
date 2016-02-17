@@ -40,27 +40,37 @@ a show has a cast (optional)
 
 --------------------part 2 --------------------------------------
 
-1. index scraper, should make a shows array(but not of instances only of hashes with their future instance's attributes [for mass assignment]. each member of the array with the info that can be pulled from the main page. the info should come as a hash! this method takes in a url as an attribute.
+x 1. index scraper, should make a shows array(but 
+  not of instances only of hashes with their future instance's attributes [for mass assignment]. each member of the array with the info that can be pulled from the main page. the info should come as a hash! this method takes in a url as an attribute.
 
-2. more info scraper, should receive a show's url. make another hash with story and price attributes.
+x 2. more info scraper, should receive a show's 
+  url. make another hash with story and price attributes.
 
 -0-
 
 Show class
 
-3.(1) will create an instance of a show, from the hash within the shows array (from index scraper). 
+x 3.(1) will create an instance of a show, from the hash 
+  within the shows array (from index scraper). 
 
-4.(1) if you use mass assignment in initialize when this object is instantiated then it will have the following attributes: name,theater, running time, and url. add instance to an @@all.
+x 4.(1) if you use mass assignment in initialize when this 
+  object is instantiated then it will have the following attributes: name,theater, running time, and url. add instance to an @@all.
 
-5.(2) will mass assign the info from additional info hash (story and price) to self()
+x 5.(2) will mass assign the info from additional info hash (
+  story and price) to self()
 
-6.make a reader for @@all 
+x 6.make a reader for @@all 
+
+today currently connects scraped show info and cli for display.
+connect new scraped info with cli.
 
 -0-
 
 cli
 
 call: make shows(1,3), add extra info(6,2,5), display shows (maybe leave display hard coded in cli for now). 
+
+make sure to link all to cli display. for display of most popular 20 shows.
 
 
 

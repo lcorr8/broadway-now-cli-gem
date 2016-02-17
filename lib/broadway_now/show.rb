@@ -4,30 +4,27 @@ class BroadwayNow::Show
   @@all = []
 
   def initialize(hash_attributes)
-    hash_attributes.each {|key,value| self.send(("#{key}="), value)} #review mass assignment again! 
+    hash_attributes.each {|key,value| self.send(("#{key}="), value)} 
   end
 
-  def create_shows(shows_array)
+  def self.create_shows(shows_array)
     shows_array.each do |hash_attributes|
-      show = Show.new(hash_attributes)
+      show = self.new(hash_attributes)
       @@all << show
+    end
   end
 
-  def add_info(extra_info_hash)
-
+  def add_info(extra_info_hash) #must be called on show instance to assign extra values to it.
+    extra_info_hash.each {|key,value| self.send(("#{key}="),value)}
   end
 
-  def all
+  def self.all
     @@all
   end
 
-def self.today
-    #should return an array of all shows currently running.
-    # technically a bunch of instances of Show.
-    self.scrape_shows
-  end
 
 
+=begin
 ########### move to scrape class.#######
   def self.scrape_shows
     shows = []
@@ -42,7 +39,7 @@ def self.today
 
   def self.scrape_first
     doc = Nokogiri::HTML(open("http://www.broadway.com/shows/tickets/?page=1"))
-    #binding.pry
+  
     top_20_shows = []
     # all shows to iterate through : 
     doc.css("div.grid-container .row-wrapper .grid-poster-unit").each do |show|
@@ -61,11 +58,7 @@ def self.today
     end
     top_20_shows 
   end
-
-  #def scrape_more(url) #show_obj.url #should this be self.scrape_more?
-   # doc = Nokogiri::HTML(open(url)) #"http://www.broadway.com/shows/the-lion-king/"
-    #self.story = doc.css(".gray-dk.inner-content-bold p").text
-  #end
+=end  
 
 
 

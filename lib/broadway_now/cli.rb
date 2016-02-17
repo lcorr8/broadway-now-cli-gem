@@ -4,14 +4,31 @@
 class BroadwayNow::CLI
 
   def call
-    list_shows
+    make_shows
+    add_attributes
+    list_shows #make shows first, add other attributes, then list shows
     menu
     goodbye
   end 
 
+  def make_shows
+    shows_array = BroadwayNow::Scraper.main_scraper
+    #binding.pry
+    BroadwayNow::Show.create_shows(shows_array)
+  end
+
+  def add_attributes 
+    BroadwayNow::Show.all.each do |show|
+      url = show.url
+      extra_info_hash = BroadwayNow::Scraper.additional_scraper(url)
+      #BroadwayNow::Show.add_info(extra_info_hash)
+      show.add_info(extra_info_hash)
+    end
+  end
+
   def list_shows
     puts "-----Shows currently running:-----"
-    @shows = BroadwayNow::Show.today
+    @shows = BroadwayNow::Show.all
     @shows.each.with_index(1) do |show,i|
       puts "#{i}. #{show.name}"
     end
@@ -24,7 +41,7 @@ class BroadwayNow::CLI
       puts "Enter show number for more info, 'all' to see all shows, or 'exit' :"
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i > 0 &&  input.to_i < 20 #update if you add more shows
         show = @shows[input.to_i-1] 
         puts "--------------------Details--------------------"
         puts "     Show:             #{show.name}"
