@@ -11,7 +11,7 @@ class BroadwayNow::CLI
   end 
 
   def greet
-    puts "Welcome to Broadway Now"
+    puts "-----Welcome to Broadway Now!-----"
   end
   
   def make_shows
