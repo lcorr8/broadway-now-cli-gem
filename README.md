@@ -1,6 +1,6 @@
 # BroadwayNow
 
-Welcome to Broadway Now gem! This gem provides a list of the 20 most popular shows currently playing in New York City. It includes Broadway and Off-Broadway shows (both musical and plays.) Popularity of the shows is determined by www.Broadway.com
+Welcome to Broadway Now! This gem provides a list of the 20 most popular shows currently playing in New York City. It includes Broadway and Off-Broadway shows (both musicals and plays.) Popularity of the shows is determined by www.Broadway.com
 
 ## Installation
 
@@ -9,6 +9,8 @@ Welcome to Broadway Now gem! This gem provides a list of the 20 most popular sho
 ## Usage
 
 Type the command below, and follow on screen prompts.
+    
+    $ broadway-now
 
 ## Development
 
