@@ -41,7 +41,7 @@ class BroadwayNow::CLI
       puts "Enter show number for more info, 'all' to see all shows, or 'exit' :"
       input = gets.strip.downcase
 
-      if input.to_i > 0 &&  input.to_i < 20 #update if you add more shows
+      if input.to_i > 0 &&  input.to_i < 21 #update if you add more shows
         show = @shows[input.to_i-1] 
         puts "--------------------Details--------------------"
         puts "     Show:             #{show.name}"
