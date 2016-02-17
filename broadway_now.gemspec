@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Laura Correa"]
   spec.email         = ["l.corr.v@gmail.com"]
 
-  spec.summary       = %q{TODO: Current Broadway & Off-Broadway shows in NYC.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{TODO: Current top 20 Broadway & Off-Broadway shows in NYC, as per www.broadway.com listings.}
+  spec.description   = %q{TODO: Shows the 20 most popular broadway shows currently playing in NYC, along with details about each show. Popularity of shows determined by www.Broadway.com}
+  spec.homepage      = "TODO: https://github.com/lcorr8/broadway-now-cli-gem "
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
