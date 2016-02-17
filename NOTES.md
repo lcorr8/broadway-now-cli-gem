@@ -9,11 +9,9 @@
  x 7. discover objects
  x 8. program
 
-
 - a command line inteface for broadway shows, starting with broadway.com
 
-
-user types in broadway-now
+user types in: broadway-now
 
 show a list of all the broadway shows currently playing
 
@@ -37,6 +35,18 @@ a show has a ticket price
 a show has a URL
 a show has a story
 a show has a cast (optional)
+
+url:"http://www.broadway.com/shows/tickets/"
+you'll have to iterate through these and get this info:
+doc.css("div.grid-container .row-wrapper").first.text.strip
+show title:       doc.css(".h4.show-title a").text
+show theater:     doc.css(".show-info li[2]").text
+show duration/intermission:      doc.css(".show-info li[3] span").text
+
+parse extra info from show page
+no iteration, just pull info, use show_obj.url info
+show story: more.css(".gray-dk.inner-content-bold p")
+price: more.css(".man.blue-link-lt").text
 
 --------------------part 2 --------------------------------------
 

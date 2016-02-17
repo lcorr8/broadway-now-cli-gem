@@ -1,28 +1,14 @@
 # BroadwayNow
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/broadway_now`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Broadway Now gem! This gem provides a list of the 20 most popular shows currently playing in New York City. It includes Broadway and Off-Broadway shows (both musical and plays.) Popularity of the shows is determined by www.Broadway.com
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'broadway_now'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install broadway_now
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the command below, and follow on screen prompts.
 
 ## Development
 

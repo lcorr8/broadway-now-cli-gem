@@ -1,19 +1,21 @@
 
-#this is a CLI controller:
-#welcomes user, and deals with input.
 class BroadwayNow::CLI
 
   def call
+    greet
     make_shows
     add_attributes
-    list_shows #make shows first, add other attributes, then list shows
+    list_shows 
     menu
     goodbye
   end 
 
+  def greet
+    puts "Welcome to Broadway Now"
+  end
+  
   def make_shows
     shows_array = BroadwayNow::Scraper.main_scraper
-    #binding.pry
     BroadwayNow::Show.create_shows(shows_array)
   end
 
@@ -21,7 +23,6 @@ class BroadwayNow::CLI
     BroadwayNow::Show.all.each do |show|
       url = show.url
       extra_info_hash = BroadwayNow::Scraper.additional_scraper(url)
-      #BroadwayNow::Show.add_info(extra_info_hash)
       show.add_info(extra_info_hash)
     end
   end
@@ -67,6 +68,5 @@ class BroadwayNow::CLI
     puts "Goodbye!"
     exit 0
   end
-
 
 end
