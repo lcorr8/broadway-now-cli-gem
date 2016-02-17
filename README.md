@@ -9,6 +9,7 @@ Welcome to Broadway Now gem! This gem provides a list of the 20 most popular sho
 ## Usage
 
 Type the command below, and follow on screen prompts.
+    
     $ broadway-now
 
 ## Development
