@@ -59,7 +59,7 @@ class BroadwayNow::CLI
       elsif input == "exit"
         goodbye
       else
-        puts "Oops! incorrect input! Enter show number for more info, 'all' to see all shows, or 'exit' :"  
+        puts "Oops! Incorrect input! Enter show number for more info, 'all' to see all shows, or 'exit' :"  
       end 
     end   
   end
