@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Current top 20 Broadway & Off-Broadway shows in NYC, as per www.broadway.com listings.}
   spec.description   = %q{Shows the 20 most popular broadway shows currently playing in NYC, along with details about each show. Popularity of shows determined by www.Broadway.com}
-  spec.homepage      = "https://github.com/lcorr8/broadway-now-cli-gem "
+  spec.homepage      = "https://rubygems.org/gems/broadway-now"
   spec.license       = "MIT"
 
  
