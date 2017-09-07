@@ -6,8 +6,8 @@ require 'broadway_now/version'
 Gem::Specification.new do |spec|
   spec.name          = "broadway_now"
   spec.version       = BroadwayNow::VERSION
-  spec.authors       = ["Laura Correa"]
-  spec.email         = ["l.corr.v@gmail.com"]
+  spec.authors       = ["L Corr"]
+  spec.email         = [""]
 
   spec.summary       = %q{Current top 20 Broadway & Off-Broadway shows in NYC, as per www.broadway.com listings.}
   spec.description   = %q{Shows the 20 most popular broadway shows currently playing in NYC, along with details about each show. Popularity of shows determined by www.Broadway.com}
